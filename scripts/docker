@@ -1,0 +1,5 @@
+1. create postgres image from dockerfile
+docker build -t postgres-image .
+
+2. start container
+docker run -d --name db -e POSTGRES_USER=myuser -e POSTGRES_PASSWORD=secret -e POSTGRES_DB=mydatabase -p 5432:5432 postgres-image
